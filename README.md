@@ -1,12 +1,33 @@
-# React + Vite
+# Projeto de Aplicação Web com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Autor:** Matheus Dantas da Costa  
+**Matrícula:** 2212130016
+**Autor:** 
+**Matrícula:** 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrição do Projeto
 
-## Expanding the ESLint configuration
+Este projeto é uma aplicação web desenvolvida em **React** com **CSS** como parte de um trabalho acadêmico.  
+A aplicação permite o **cadastro e gerenciamento de itens**, com funcionalidades como listagem dinâmica, integração com API simulada (JSONPlaceholder), navegação entre páginas e validação de formulários.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Funcionalidades
+
+- Formulário para cadastrar itens (nome e descrição).
+- Listagem dinâmica dos itens cadastrados.
+- Integração com API REST (JSONPlaceholder).
+- Validação dos campos do formulário.
+- Menu de navegação entre páginas (formulário e listagem).
+- Estado global utilizando Context API.
+- Estilização com CSS e responsividade.
+
+---
+
+## Como Executar o Projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/Dantass/aplicacaowebdois.git
