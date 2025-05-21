@@ -27,12 +27,12 @@ Este projeto é uma aplicação web desenvolvida com **React** no frontend e **j
 ### Backend (API REST)
 
 1. Acesse a pasta `back/`:
-   cd back
-   npm install
-   npx json-server db.json
+  - cd back
+  - npm install
+  - npx json-server db.json
 
 ### Frontend (React)
 
 2. Retorne usando `cd ..` para aplicacaowebdois
-   npm install
-   npm run dev
+  - npm install
+  - npm run dev
