@@ -1,33 +1,38 @@
-# Projeto de Aplicação Web com React
+# Projeto de Aplicação Web com React + API REST
 
-**Autor:** Matheus Dantas da Costa  
-**Matrícula:** 2212130016
-**Autor:** 
-**Matrícula:** 
+Este projeto é uma aplicação web desenvolvida com **React** no frontend e **json-server** no backend. O objetivo é gerenciar uma lista de contatos com funcionalidades de cadastro, edição, remoção e listagem, além de praticar navegação, estado global e consumo de API REST.
 
----
+## Alunos
 
-## Descrição do Projeto
+- **Nome:** Matheus Dantas da Costa  
+  **Matrícula:** 2212130016  
 
-Este projeto é uma aplicação web desenvolvida em **React** com **CSS** como parte de um trabalho acadêmico.  
-A aplicação permite o **cadastro e gerenciamento de itens**, com funcionalidades como listagem dinâmica, integração com API simulada (JSONPlaceholder), navegação entre páginas e validação de formulários.
+- **Nome:**   
+  **Matrícula:**
 
----
+## Funcionalidades Implementadas
 
-## Funcionalidades
-
-- Formulário para cadastrar itens (nome e descrição).
-- Listagem dinâmica dos itens cadastrados.
-- Integração com API REST (JSONPlaceholder).
-- Validação dos campos do formulário.
-- Menu de navegação entre páginas (formulário e listagem).
-- Estado global utilizando Context API.
-- Estilização com CSS e responsividade.
+- Navegação entre páginas via estado global (`Context API`)
+- Cadastro de novos contatos com validação de formulário
+- Edição de contatos existentes
+- Listagem dinâmica de contatos com atualização em tempo real
+- Remoção de contatos
+- Consumo de API REST via `axios`
+- Estilização com CSS modular e responsivo
 
 ---
 
 ## Como Executar o Projeto
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/Dantass/aplicacaowebdois.git
+### Backend (API REST)
+
+1. Acesse a pasta `back/`:
+   cd back
+   npm install
+   npx json-server db.json
+
+### Frontend (React)
+
+2. Retorne usando `cd ..` para aplicacaowebdois
+   npm install
+   npm run dev
