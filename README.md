@@ -33,6 +33,6 @@ Este projeto é uma aplicação web desenvolvida com **React** no frontend e **j
 
 ### Frontend (React)
 
-2. Retorne usando `cd ..` para projetoweb
+2. Retorne usando `cd ..` para **projetoweb**
   - npm install
   - npm run dev
