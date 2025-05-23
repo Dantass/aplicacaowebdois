@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { adicionar } from "../services/ContatoService.js";
 import { RotaContext } from "../contexts/RotaContext.jsx";
-import Formulario from "./Formulario.jsx";
+import Formulario from "../forms/Formulario.jsx";
 
 function Novo() {
   const [erro, setErro] = useState("");
+  const [sucesso, setSucesso] = useState(""); 
   const { setRota } = useContext(RotaContext);
 
   const handleSalvar = async (contato) => {
@@ -12,8 +13,12 @@ function Novo() {
 
     if (resposta.sucesso) {
       setErro("");
-      setRota("/listar");
+      setSucesso("Contato cadastrado com sucesso!");
+      setTimeout(() => {
+        setRota("/listar");
+      }, 1000); 
     } else {
+      setSucesso("");
       setErro(resposta.mensagem);
     }
   };
@@ -22,7 +27,8 @@ function Novo() {
     <>
       <h2>Novo Contato</h2>
       <Formulario onSubmit={handleSalvar} />
-      {erro && <p>{erro}</p>}
+      {erro && <p style={{ color: "red" }}>{erro}</p>}
+      {sucesso && <p style={{ color: "green" }}>{sucesso}</p>}
     </>
   );
 }

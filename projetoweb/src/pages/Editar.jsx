@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { buscarPorId, modificar } from "../services/ContatoService.js";
 import { RotaContext } from "../contexts/RotaContext.jsx";
-import Formulario from "./Formulario.jsx";
+import Formulario from "../forms/Formulario.jsx";
+
 
 function Editar() {
   const { rota, setRota } = useContext(RotaContext);
   const [contato, setContato] = useState({});
   const [erro, setErro] = useState("");
+  const [sucesso, setSucesso] = useState(""); 
   const id = rota.replace("/editar/", "");
 
   useEffect(() => {
@@ -26,8 +28,12 @@ function Editar() {
     const resposta = await modificar(id, dadosAtualizados);
     if (resposta.sucesso) {
       setErro("");
-      setRota("/listar");
+      setSucesso("Contato atualizado com sucesso!");
+      setTimeout(() => {
+        setRota("/listar");
+      }, 1000);
     } else {
+      setSucesso("");
       setErro(resposta.mensagem);
     }
   };
@@ -36,7 +42,8 @@ function Editar() {
     <>
       <h2>Editar Contato</h2>
       <Formulario onSubmit={handleSalvar} valores={contato} />
-      {erro && <p>{erro}</p>}
+      {erro && <p style={{ color: "red" }}>{erro}</p>}
+      {sucesso && <p style={{ color: "green" }}>{sucesso}</p>}
     </>
   );
 }
